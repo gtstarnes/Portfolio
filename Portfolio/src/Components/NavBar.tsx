@@ -2,25 +2,22 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineMenu, AiOutlineClose } from 'rea
 import { useState } from 'react';
 
 const NavBar = () => {
-    const {menu, setMenu} = useState(false);
+    const [menu, setMenu] = useState<boolean>(false);
     const handleMenuClick = () => {
-        if (menu === false) {
-            setMenu(true);
-        }
-        setMenu(false)
+        setMenu(!menu);
     }
-    
+
   return (
     <>
     
     
     <nav className="flex justify-between">
         <p className="text-[#dda74f] font-bold ml-4 mt-2 text-xl">GREGORY STARNES</p>
-        <ul className="flex gap-4 mt-2 pr-4">
+        <ul className="flex gap-4 mt-3 pr-4">
             <li>Home</li>
             <li>About</li>
             <li>Projects</li>
-            <AiOutlineMenu size={20} className="mt-[3px]" />
+            <li>{!menu ? <AiOutlineMenu className="mt-[3px]" onClick={handleMenuClick} size={20}  /> : <AiOutlineClose className="mt-[3px]" onClick={handleMenuClick} size={20} />}</li>
         </ul>
         
     </nav>
