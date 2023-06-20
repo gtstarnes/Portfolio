@@ -6,7 +6,7 @@ const NavBar = () => {
     
     
     <nav className="flex justify-between">
-        <p className="font-bold ml-4 mt-2">GREGORY STARNES</p>
+        <p className="text-[#dda74f] font-bold ml-4 mt-2">GREGORY STARNES</p>
         <ul className="flex gap-4 mt-2 pr-4">
             <li>Home</li>
             <li>About</li>
@@ -14,9 +14,9 @@ const NavBar = () => {
         </ul>
     </nav>
     
-    <nav className="fixed top-0">
-        <p className="font-bold ml-4 mt-2">GREGORY STARNES</p>
-        <ul className="ml-4 mt-2">
+    <nav className="fixed border-r-2 h-screen top-0 w-[50%]">
+        <p className="text-[#dda74f] font-bold ml-4 mt-2">GREGORY STARNES</p>
+        <ul className="flex flex-col gap-2 ml-4 mt-10">
             <li>Home</li>
             <li>About</li>
             <li>Projects</li>
