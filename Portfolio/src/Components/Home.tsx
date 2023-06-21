@@ -1,7 +1,7 @@
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiJavascript, DiReact } from "react-icons/di";
 
-const Hero = () => {
+const Home = () => {
   return (
     <div className="flex flex-col gap-2 items-center w-full mt-[300px] ">
         <p className="text-6xl md:text-7xl lg:text-8xl text-[#dda74f] font-bold">GREGORY STARNES</p>
@@ -16,4 +16,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Home
