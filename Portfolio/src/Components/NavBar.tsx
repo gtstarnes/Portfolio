@@ -1,6 +1,6 @@
 import { AiFillLinkedin, AiFillGithub, AiOutlineMenu, AiOutlineClose, AiFillMail } from 'react-icons/ai';
 import { LuSunMoon } from 'react-icons/lu';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const NavBar = () => {
     const [menu, setMenu] = useState<boolean>(false);
@@ -8,13 +8,14 @@ const NavBar = () => {
     const handleClick = () => {
         setMenu(current => !current);
     }
+
+    {/* Accesses html element to add "dark" as a class if darkMode is true; removes it if false */}
     const handleDarkMode = () => {
-        const html = document.documentElement;
         setDarkMode(!darkMode)
         if (darkMode) {
-            html.classList.remove("dark");
+            document.documentElement.classList.remove("dark");
         } else {
-            html.className = "dark";
+            document.documentElement.className = "dark";
         }
        
     }
@@ -44,9 +45,15 @@ const NavBar = () => {
         </ul>
         <p className="text-lg font-bold mb-2 ml-4 mt-20">CONTACT</p>
             <div className="flex gap-2 ml-3 mt-2">
-                <AiFillGithub size={30} />
-                <a href="https://www.linkedin.com/in/gregory-starnes/" target="_blank"><AiFillLinkedin size={30} /></a>
-                <a href="mailto:gtstarnes@gmail.com"><AiFillMail size={30} /></a>
+                <a href="https://github.com/gtstarnes" target="_blank">
+                    <AiFillGithub size={30} className="hover:text-[#dda74f]" />    
+                </a>
+                <a href="https://www.linkedin.com/in/gregory-starnes/" target="_blank">
+                    <AiFillLinkedin size={30} className="hover:text-[#dda74f]" />
+                </a>
+                <a href="mailto:gtstarnes@gmail.com">
+                    <AiFillMail size={30} className="hover:text-[#dda74f]" />
+                </a>
             </div>
 
     </nav>
