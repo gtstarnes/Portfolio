@@ -11,7 +11,7 @@ const NavBar = () => {
     <>
     
     
-    <nav className="flex justify-between w-full sm:border-2 pb-4">
+    <nav className="flex justify-between w-full border-b-2 drop-shadow-md pb-4">
         <p className="text-[#dda74f] font-bold ml-4 mt-2 text-xl">GREGORY STARNES PORTFOLIO</p>
         <ul className="sm:flex gap-4 hidden mt-2 pr-4 text-lg">
             <li>Home</li>
@@ -23,8 +23,8 @@ const NavBar = () => {
         </div>
     </nav>
     
-    <nav className={menu ? "bg-white border-r-2 fixed h-full top-0 w-[60%] ease-in-out duration-500" : "fixed left-[-100%]" }>
-        <p className="text-[#dda74f] font-bold ml-4 mt-2 text-xl">GREGORY STARNES PORTFOLIO</p>
+    <nav className={menu ? "bg-white border-r-2 fixed h-full top-0 w-[60%] ease-in-out duration-200" : "fixed left-[-100%]" }>
+        <p className="text-[#dda74f] font-bold ml-4 mt-2 text-xl"></p>
         <ul className="flex flex-col gap-4 ml-4 mt-10 text-lg w-[80%]">
             <li className="border-b-2 pb-4">Home</li>
             <li className="border-b-2 pb-4">About</li>
