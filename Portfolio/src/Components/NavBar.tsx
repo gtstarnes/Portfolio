@@ -21,40 +21,41 @@ const NavBar = () => {
     }
   return (
     <>
-    <nav className="flex justify-between w-full border-b-2 dark:border-[#dda74f] drop-shadow-md pb-4">
-        <p className="text-[#dda74f] font-bold ml-4 mt-2 text-xl">GREGORY STARNES PORTFOLIO</p>
-        <ul className="sm:flex sm:fixed sm:right-10 gap-4 hidden mt-2 pr-4 text-lg">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
+    <nav className="fixed top-[177px] justify-between w-full pb-4">
+
+        <ul className="sm:flex sm:fixed sm:right-10 gap-4 hidden mt-2 pr-4 text-3xl">
+            <li className="bg-[#000300] px-3 hover:text-[#dda74f]">Home</li>
+            <li className="bg-[#000300] px-3 hover:text-[#dda74f]">About</li>
+            <li className="bg-[#000300] px-3 hover:text-[#dda74f]">Projects</li>
         </ul>
         <div>
-            <LuSunMoon size={20} className="fixed top-3 right-[50px] sm:right-[20px]" onClick={handleDarkMode} />
+            <LuSunMoon size={40} className="fixed top-3 right-4 sm:right-[20px]" onClick={handleDarkMode} />
         </div>
         <div className="block sm:hidden">
-        {!menu ? <AiOutlineMenu className="mr-4 mt-[13px]" onClick={handleClick} size={20} /> : <AiOutlineClose className="mr-4 mt-[13px]" onClick={handleClick} size={20} />}
+        {!menu ? <AiOutlineMenu className="fixed top-[178px] right-4 mr-4 dark:bg-[#000300] bg-white mt-[13px]" onClick={handleClick} size={60} /> : <AiOutlineClose className="fixed top-[178px] right-4 mr-4 dark:bg-[#000300] bg-white mt-[13px]" onClick={handleClick} size={60} />}
         </div>
     </nav>
     
-    <nav className={menu ? "bg-white dark:bg-[#000300] border-r-2 fixed h-full top-0 w-[60%] ease-in-out duration-200" : "fixed left-[-100%]" }>
-        <p className="text-[#dda74f] font-bold ml-4 mt-2 text-xl"></p>
-        <ul className="flex flex-col gap-4 ml-4 mt-10 text-lg w-[80%]">
-            <li className="border-b-2 dark:border-[#dda74f] pb-4">Home</li>
-            <li className="border-b-2 dark:border-[#dda74f] pb-4">About</li>
+    <nav className={menu ? "bg-white dark:bg-[#000300] border-r-4 border-[#dda74f] dark:border-white  fixed flex flex-col justify-between h-full sm:hidden top-0 w-[60%] ease-in-out duration-100" : "fixed left-[-100%]" }>
+        <ul className="flex flex-col gap-4 ml-4 mt-10 text-4xl w-[80%]">
+            <li className="border-b-4 border-[#dda74f] pb-8">Home</li>
+            <li className="border-b-4 border-[#dda74f] pb-8">About</li>
             <li>Projects</li>
         </ul>
-        <p className="text-lg font-bold mb-2 ml-4 mt-20">CONTACT</p>
-            <div className="flex gap-2 ml-3 mt-2">
+        <footer className="mb-4">
+        <p className="text-4xl mb-2 ml-4 mt-20">CONTACT</p>
+            <div className="flex gap-4 ml-3 mt-4">
                 <a href="https://github.com/gtstarnes" target="_blank">
-                    <AiFillGithub size={30} className="hover:text-[#dda74f]" />    
+                    <AiFillGithub size={50} className="hover:text-[#dda74f]" />    
                 </a>
                 <a href="https://www.linkedin.com/in/gregory-starnes/" target="_blank">
-                    <AiFillLinkedin size={30} className="hover:text-[#dda74f]" />
+                    <AiFillLinkedin size={50} className="hover:text-[#dda74f]" />
                 </a>
                 <a href="mailto:gtstarnes@gmail.com">
-                    <AiFillMail size={30} className="hover:text-[#dda74f]" />
+                    <AiFillMail size={50} className="hover:text-[#dda74f]" />
                 </a>
             </div>
+        </footer>
 
     </nav>
     </>
