@@ -23,10 +23,10 @@ const NavBar = () => {
     <>
     <nav className="fixed top-[177px] justify-between w-full pb-4">
 
-        <ul className="sm:flex sm:fixed sm:right-10 gap-4 hidden mt-2 pr-4 text-3xl">
-            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer">Home</li>
-            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer">About</li>
-            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer">Projects</li>
+        <ul className="w-full sm:flex sm:fixed sm:translate-x-[30%] md:translate-x-[47%] lg:translate-x-[62%] xl:translate-x-[69%] duration-200 gap-4 hidden mt-2 pr-4 text-3xl">
+            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">Home</li>
+            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">About</li>
+            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">Projects</li>
         </ul>
         <div>
             <LuSunMoon size={40} className="hover:cursor-pointer fixed top-3 right-4 sm:right-[20px]" onClick={handleDarkMode} />
@@ -36,9 +36,9 @@ const NavBar = () => {
         </div>
     </nav>
     
-    <nav className={menu ? "bg-white dark:bg-[#000300] border-r-4 border-[#dda74f] dark:border-white  fixed flex flex-col justify-between h-full sm:hidden top-0 w-[60%] ease-in-out duration-100" : "fixed left-[-100%]" }>
+    <nav className={menu ? "bg-white dark:bg-[#000300] border-r-4 border-[#dda74f] dark:border-white  fixed flex flex-col justify-between h-full sm:hidden top-0 left-[30px] w-[60%] ease-in-out duration-100" : "fixed left-[-100%]" }>
         <ul className="flex flex-col gap-4 ml-4 mt-10 text-4xl w-[80%]">
-            <li className="border-b-4 border-[#dda74f] pb-8 hover:cursor-pointer hover:text-[#dda74f]">Home</li>
+            <li className="border-b-4 border-[#dda74f] pb-8 hover:cursor-pointer hover:text-[#dda74f] font-semibold">Home</li>
             <li className="border-b-4 border-[#dda74f] pb-8 hover:cursor-pointer hover:text-[#dda74f]">About</li>
             <li className="hover:cursor-pointer hover:text-[#dda74f]">Projects</li>
         </ul>
