@@ -1,6 +1,7 @@
 import { AiFillLinkedin, AiFillGithub, AiOutlineMenu, AiOutlineClose, AiFillMail } from 'react-icons/ai';
 import { LuSunMoon } from 'react-icons/lu';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     const [menu, setMenu] = useState<boolean>(false);
@@ -24,9 +25,9 @@ const NavBar = () => {
     <nav className="fixed top-[177px] justify-between w-full pb-4">
 
         <ul className="w-full sm:flex sm:fixed sm:translate-x-[30%] md:translate-x-[47%] lg:translate-x-[62%] xl:translate-x-[69%] duration-200 gap-4 hidden mt-2 pr-4 text-3xl">
-            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">Home</li>
-            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">About</li>
-            <li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">Projects</li>
+            <Link to="/"><li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">Home</li></Link>
+            <Link to="/about"><li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">About</li></Link>
+            <Link to="/projects"><li className="dark:bg-[#000300] bg-white px-3 hover:text-[#dda74f] hover:cursor-pointer font-semibold -rotate-[15deg] hover:transform-none duration-200">Projects</li></Link>
         </ul>
         <div>
             <LuSunMoon size={40} className="hover:cursor-pointer fixed top-3 right-4 sm:right-[20px]" onClick={handleDarkMode} />
